@@ -31,6 +31,7 @@ export default function App() {
         setCurrentNumber((fistNumber / lastNumber).toString())
         return
     }
+  
   }
 
   function handleInput(buttonPressed){
@@ -52,7 +53,10 @@ export default function App() {
         calculator()
         return
       case '+/-':
+        setCurrentNumber(currentNumber * (-1))
+        calculator()
         return
+        
     }
 
     setCurrentNumber(currentNumber + buttonPressed)
